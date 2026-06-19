@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
 # ✅ Load your trained model
-model = YOLO("runs/detect/train/weights/best.pt")  # or last.pt
+model = YOLO("best.pt") # or last.pt
 
 
 # -----------------------------
