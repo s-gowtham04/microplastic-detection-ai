@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detection — Microplastic Detection in Water</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="det-header">
+    <h1 onclick="window.location='/'">Microplastic Detection</h1>
+  </header>
+
+  <!-- STEPPER -->
+  <div class="stepper" id="stepper"></div>
+
+  <!-- MAIN CONTENT -->
+  <main class="content" id="main-content">
+
+      <div class="upload-box">
+
+        <h2>Upload Water Sample Image</h2>
+
+        <input type="file" id="imageInput">
+
+        <br><br>
+
+        <button onclick="uploadImage()" class="detect-btn">
+          Detect Microplastic
+        </button>
+
+        <br><br>
+
+        <pre id="result"></pre>
+
+      </div>
+
+  </main>
+
+  <!-- JS -->
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
